@@ -10,7 +10,7 @@ const abi = JSON.parse(fs.readFileSync('./contracts/artifacts/Test.abi'));
 
   const contract = new web3.eth.Contract(abi);
 
-  contract.deploy({
+  return contract.deploy({
     data: byteCode.toString()
   }).send({
     from: uploaderAddress,
