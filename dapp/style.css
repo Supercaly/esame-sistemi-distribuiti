@@ -1,0 +1,102 @@
+body {
+    background-color: #222336;
+}
+
+h4 {
+    font-size: 18px;
+    font-weight: 300;
+    margin: 10px;
+    color: white;
+}
+
+input {
+    background-color: #35384C;
+    border-color: transparent;
+    padding: 10px 20px;
+}
+
+.flex {
+    display: flex;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+#token-name-txt {
+    margin-right: 18px;
+}
+
+#token-value-label {
+    margin-right: 8px;
+}
+
+.vspacer {
+    margin-bottom: 8px;
+}
+
+.address-input-div {
+    display: flex;
+}
+
+.actions-div {
+    margin-top: 32px;
+    margin-left: 24px;
+}
+
+.action-div {
+    display: flex;
+    width: 400px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 24px;
+    padding-right: 24px;
+    align-content: center;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    background-color: #2A2C3F;
+}
+
+.action-content-div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.action-multiline-div {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 24px;
+    padding-right: 24px;
+    margin-bottom: 16px;
+    background-color: #2A2C3F;
+}
+
+.action-content-input-div {
+    display: flex;
+    margin-bottom: 8px;
+}
+
+.action-content-input-label {
+    margin: 14px;
+    text-align: center;
+}
+
+.action-btn {
+    background-color: #2E4A64;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.action-title {
+    font-weight: 600;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}

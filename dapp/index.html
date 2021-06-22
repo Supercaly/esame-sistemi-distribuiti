@@ -2,21 +2,66 @@
 <html>
 
 <head>
-	<title>Test</title>
+	<title>MoneyGrabber</title>
+	<link rel="stylesheet" href="style.css">
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/web3@1.2.6/dist/web3.min.js"></script>
-	<script type="text/javascript" src="index.js"></script>
+
 </head>
 
 <body>
-	<div>
-		<h3>Contract address:</h3>
-		<input id="contract-addr-input">
-		<h3>User address:</h3>
-		<input id="user-addr-input">
-		<button id="execute-btn">Go</button>
+	<!-- Token info -->
+	<div id="token-info-div" class="flex">
+		<h4 id="token-name-txt" class="bold"></h4>
+		<h4 id="token-value-label">Value</h4>
+		<h4 id="token-value-txt" class="bold"></h4>
 	</div>
-	<label id="label"></label>
-
+	<!-- User wallet address -->
+	<div class="address-input-div">
+		<h4>Your wallet address</h4>
+		<input id="user-address-input">
+	</div>
+	<!-- Main interface -->
+	<div class="actions-div">
+		<div class="action-div">
+			<button id="current-balance-btn" class="action-btn">Current balance</button>
+			<h4 id="current-balance-txt" class="action-content-input-label"></h4>
+		</div>
+		<div class="vspacer"></div>
+		<div class="action-multiline-div">
+			<h4 class="action-title">Transfer</h4>
+			<div class="action-content-div">
+				<div class="action-content-input-div">
+					<h4 class="action-content-input-label">to</h4>
+					<input id="transfer-to-input">
+				</div>
+				<div class="action-content-input-div">
+					<h4 class="action-content-input-label">amount</h4>
+					<input id="transfer-amount-input">
+				</div>
+				<button id="transfer-btn" class="action-btn">Transfer</button>
+			</div>
+		</div>
+		<div class="vspacer"></div>
+		<div class="action-multiline-div">
+			<h4 class="action-title">Transfer from</h4>
+			<div class="action-content-div">
+				<div class="action-content-input-div">
+					<h4 class="action-content-input-label">from</h4>
+					<input id="transfer-from-from-input">
+				</div>
+				<div class="action-content-input-div">
+					<h4 class="action-content-input-label">to</h4>
+					<input id="transfer-from-to-input">
+				</div>
+				<div class="action-content-input-div">
+					<h4 class="action-content-input-label">amount</h4>
+					<input id="transfer-from-amount-input">
+				</div>
+				<button id="transfer-from-btn" class="action-btn">Transfer from</button>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="index.js"></script>
 </body>
 
 </html>
