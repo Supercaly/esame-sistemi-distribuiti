@@ -13,6 +13,7 @@ input {
     background-color: #35384C;
     border-color: transparent;
     padding: 10px 20px;
+    color: white;
 }
 
 .flex {
@@ -46,7 +47,7 @@ input {
 
 .action-div {
     display: flex;
-    width: 400px;
+    width: 540px;
     padding-top: 16px;
     padding-bottom: 16px;
     padding-left: 24px;
@@ -67,7 +68,7 @@ input {
 .action-multiline-div {
     display: flex;
     flex-direction: column;
-    width: 400px;
+    width: 540px;
     padding-top: 16px;
     padding-bottom: 16px;
     padding-left: 24px;
@@ -99,4 +100,20 @@ input {
     margin-bottom: 0px;
     margin-left: 0px;
     margin-right: 0px;
+}
+
+.action-title-double {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.danger-zone-div {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    border-color: #cc4c4c;
+    border-style: solid;
+    border-radius: 16px;
+    padding: 16px;
 }

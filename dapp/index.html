@@ -5,20 +5,19 @@
 	<title>MoneyGrabber</title>
 	<link rel="stylesheet" href="style.css">
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/web3@1.2.6/dist/web3.min.js"></script>
-
 </head>
 
 <body>
 	<!-- Token info -->
 	<div id="token-info-div" class="flex">
 		<h4 id="token-name-txt" class="bold"></h4>
-		<h4 id="token-value-label">Value</h4>
-		<h4 id="token-value-txt" class="bold"></h4>
+		<!-- <h4 id="token-value-label">Value</h4> -->
+		<!-- <h4 id="token-value-txt" class="bold"></h4> -->
 	</div>
 	<!-- User wallet address -->
 	<div class="address-input-div">
 		<h4>Your wallet address</h4>
-		<input id="user-address-input">
+		<input id="user-address-input" size="45">
 	</div>
 	<!-- Main interface -->
 	<div class="actions-div">
@@ -32,11 +31,11 @@
 			<div class="action-content-div">
 				<div class="action-content-input-div">
 					<h4 class="action-content-input-label">to</h4>
-					<input id="transfer-to-input">
+					<input id="transfer-to-input" size="45">
 				</div>
 				<div class="action-content-input-div">
 					<h4 class="action-content-input-label">amount</h4>
-					<input id="transfer-amount-input">
+					<input id="transfer-amount-input" size="45">
 				</div>
 				<button id="transfer-btn" class="action-btn">Transfer</button>
 			</div>
@@ -47,20 +46,74 @@
 			<div class="action-content-div">
 				<div class="action-content-input-div">
 					<h4 class="action-content-input-label">from</h4>
-					<input id="transfer-from-from-input">
+					<input id="transfer-from-from-input" size="45">
 				</div>
 				<div class="action-content-input-div">
 					<h4 class="action-content-input-label">to</h4>
-					<input id="transfer-from-to-input">
+					<input id="transfer-from-to-input" size="45">
 				</div>
 				<div class="action-content-input-div">
 					<h4 class="action-content-input-label">amount</h4>
-					<input id="transfer-from-amount-input">
+					<input id="transfer-from-amount-input" size="45">
 				</div>
 				<button id="transfer-from-btn" class="action-btn">Transfer from</button>
 			</div>
 		</div>
+		<div class="action-multiline-div">
+			<h4 class="action-title">Approve</h4>
+			<div class="action-content-div">
+				<div class="action-content-input-div">
+					<h4 class="action-content-input-label">spender</h4>
+					<input id="approve-spender-input" size="45">
+				</div>
+				<div class="action-content-input-div">
+					<h4 class="action-content-input-label">amount</h4>
+					<input id="approve-amount-input" size="45">
+				</div>
+				<button id="approve-btn" class="action-btn">Approve</button>
+			</div>
+		</div>
+		<div class="action-multiline-div">
+			<div class="action-title-double">
+				<h4 class="action-title">Is allowed?</h4>
+				<h4 id="allowed-answer-txt" class="action-title"></h4>
+			</div>
+			<div class="action-content-div">
+				<div class="action-content-input-div">
+					<h4 class="action-content-input-label">owner</h4>
+					<input id="allowed-owner-input" size="45">
+				</div>
+				<div class="action-content-input-div">
+					<h4 class="action-content-input-label">spender</h4>
+					<input id="allowed-spender-input" size="45">
+				</div>
+				<button id="allowed-btn" class="action-btn">IsAllowed?</button>
+			</div>
+		</div>
+		<div class="danger-zone-div">
+			<div class="action-multiline-div">
+				<h4 class="action-title">Forge</h4>
+				<div class="action-content-div">
+					<div class="action-content-input-div" size="45">
+						<h4 class="action-content-input-label">amount</h4>
+						<input id="forge-amount-input" size="45">
+					</div>
+					<button id="forge-btn" class="action-btn">Forge</button>
+				</div>
+			</div>
+			<div class="action-multiline-div">
+				<h4 class="action-title">Burn</h4>
+				<div class="action-content-div">
+					<div class="action-content-input-div">
+						<h4 class="action-content-input-label">amount</h4>
+						<input id="burn-amount-input" size="45">
+					</div>
+					<button id="burn-btn" class="action-btn">Burn</button>
+				</div>
+			</div>
+		</div>
 	</div>
+
 	<script type="text/javascript" src="index.js"></script>
 </body>
 
