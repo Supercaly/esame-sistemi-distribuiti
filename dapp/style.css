@@ -94,6 +94,14 @@ input {
     border-radius: 4px;
 }
 
+.btn-red-color {
+    background-color: #B84040;
+}
+
+.btn-orange-color {
+    background-color: #C97539;
+}
+
 .action-title {
     font-weight: 600;
     margin-top: 0px;
@@ -113,6 +121,16 @@ input {
     flex-direction: column;
     width: 600px;
     border-color: #cc4c4c;
+    border-style: solid;
+    border-radius: 16px;
+    padding: 16px;
+}
+
+.exchange-zone-div {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    border-color: #C97539;
     border-style: solid;
     border-radius: 16px;
     padding: 16px;

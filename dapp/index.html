@@ -23,6 +23,43 @@
 	</div>
 	<!-- Main interface -->
 	<div class="actions-div">
+		<div class="exchange-zone-div">
+			<div class="action-div">
+				<button id="total-tokens-btn" class="action-btn btn-orange-color">Total tokens</button>
+				<h4 id="total-tokens-txt" class="action-content-input-label"></h4>
+			</div>
+			<div class="vspacer"></div>
+			<div class="action-multiline-div">
+				<h4 class="action-title">Buy tokens</h4>
+				<div class="action-content-div">
+					<div class="action-content-input-div">
+						<h4 class="action-content-input-label">owner</h4>
+						<input id="buy-tokens-owner-input" size="45">
+					</div>
+					<div class="action-content-input-div">
+						<h4 class="action-content-input-label">amount</h4>
+						<input id="buy-tokens-amount-input" size="45">
+					</div>
+					<button id="buy-tokens-btn" class="action-btn btn-orange-color">Buy</button>
+				</div>
+			</div>
+			<div class="vspacer"></div>
+			<div class="action-multiline-div">
+				<h4 class="action-title">Sell tokens</h4>
+				<div class="action-content-div">
+					<div class="action-content-input-div">
+						<h4 class="action-content-input-label">owner</h4>
+						<input id="sell-tokens-owner-input" size="45">
+					</div>
+					<div class="action-content-input-div">
+						<h4 class="action-content-input-label">amount</h4>
+						<input id="sell-tokens-amount-input" size="45">
+					</div>
+					<button id="sell-tokens-btn" class="action-btn btn-orange-color">Sell</button>
+				</div>
+			</div>
+		</div>
+		<div class="vspacer"></div>
 		<div class="action-div">
 			<button id="current-balance-btn" class="action-btn">Current balance</button>
 			<h4 id="current-balance-txt" class="action-content-input-label"></h4>
@@ -100,7 +137,7 @@
 						<h4 class="action-content-input-label">amount</h4>
 						<input id="forge-amount-input" size="45">
 					</div>
-					<button id="forge-btn" class="action-btn">Forge</button>
+					<button id="forge-btn" class="action-btn btn-red-color">Forge</button>
 				</div>
 			</div>
 			<div class="action-multiline-div">
@@ -110,7 +147,7 @@
 						<h4 class="action-content-input-label">amount</h4>
 						<input id="burn-amount-input" size="45">
 					</div>
-					<button id="burn-btn" class="action-btn">Burn</button>
+					<button id="burn-btn" class="action-btn btn-red-color">Burn</button>
 				</div>
 			</div>
 		</div>

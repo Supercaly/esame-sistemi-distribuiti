@@ -8,11 +8,16 @@ getContract = (web3, address) => {
 
 const contract = getContract(web3, contractAddress);
 
-window.onload = async() => {
-    tokenName = await contract.methods.name().call();
-    tokenSymbol = await contract.methods.symbol().call();
-    document.getElementById('token-name-txt').innerHTML = `${tokenName} - ${tokenSymbol}`
-    document.getElementById('contract-name-txt').innerHTML = `[${contractAddress}]`
+window.onload = async () => {
+    try {
+        tokenName = await contract.methods.name().call();
+        tokenSymbol = await contract.methods.symbol().call();
+        document.getElementById('token-name-txt').innerHTML = `${tokenName} - ${tokenSymbol}`
+        document.getElementById('contract-name-txt').innerHTML = `[${contractAddress}]`
+    } catch (err) {
+        document.getElementById('token-name-txt').innerHTML = `Error connecting to contract [${contractAddress}]`
+        document.getElementById('token-name-txt').style.color = "#E2325A"
+    }
 };
 
 // current balance button click
@@ -74,7 +79,7 @@ document.getElementById('allowed-btn').onclick = async () => {
     positiveColor = "#57AD69";
     negativeColor = "#E2325A";
     answerTxt = document.getElementById('allowed-answer-txt');
-    
+
     try {
         allowedOwner = document.getElementById('allowed-owner-input').value;
         allowedSpender = document.getElementById('allowed-spender-input').value;
@@ -114,6 +119,44 @@ document.getElementById('burn-btn').onclick = async () => {
     } catch (err) {
         console.error(err);
         alert(err);
+    }
+};
+
+// Buy tokens
+document.getElementById('buy-tokens-btn').onclick = async () => {
+    try {
+        ownerAddress = document.getElementById('buy-tokens-owner-input').value;
+        amount = document.getElementById('buy-tokens-amount-input').value;
+        await contract.methods.forge(amount).send({ from: ownerAddress });
+        await contract.methods.transfer(getUserAddress(), amount).send({ from: ownerAddress });
+    } catch (err) {
+        console.error(err);
+        alert(err);
+    }
+};
+
+// Sell tokens
+document.getElementById('sell-tokens-btn').onclick = async () => {
+    try {
+        ownerAddress = document.getElementById('sell-tokens-owner-input').value;
+        amount = document.getElementById('sell-tokens-amount-input').value;
+        await contract.methods.transfer(ownerAddress, amount).send({ from: getUserAddress() });
+        await contract.methods.burn(amount).send({ from: ownerAddress });
+    } catch (err) {
+        console.error(err);
+        alert(err);
+    }
+};
+
+// Total tokens in the contract
+document.getElementById('total-tokens-btn').onclick = async () => {
+    try {
+        totalSupply = await contract.methods.totalSupply().call({ from: getUserAddress() });
+        initialSupply = await contract.methods.initialAmount().call({ from: getUserAddress() });
+        tokenSymbol = await contract.methods.symbol().call({ from: getUserAddress() });
+        document.getElementById('total-tokens-txt').innerHTML = `${totalSupply}/${initialSupply} ${tokenSymbol}`;
+    } catch (err) {
+        console.error(err);
     }
 };
 
